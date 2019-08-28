@@ -1,4 +1,4 @@
-m3u8
+m3u-parser
 ====
 
 node-m3u8 is a streaming m3u8 parser tailored for dealing with [Apple's HTTP
