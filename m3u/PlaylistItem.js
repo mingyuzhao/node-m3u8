@@ -28,9 +28,9 @@ PlaylistItem.prototype.toString = function toString() {
   if (this.get('daiPlacementOpportunity')) {
     output.push('#EXT-X-PLACEMENT-OPPORTUNITY');
   }
-  if (this.get('duration') != null || this.get('title') != null) {
+  if (this.get('duration') != null || this.get('tvg-logo') != null || this.get('title') != null) {
     output.push(
-      '#EXTINF:' + [this.get('duration').toFixed(4), this.get('title')].join(',')
+      '#EXTINF:' + [this.get('duration').toFixed(4), this.get('tvg-logo'), this.get('title')].join(',')
     );
   }
   if (this.get('byteRange') != null) {

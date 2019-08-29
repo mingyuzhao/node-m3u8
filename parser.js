@@ -75,7 +75,24 @@ m3uParser.prototype['EXTINF'] = function parseInf(data) {
   this.addItem(new PlaylistItem);
 
   data = data.split(',');
-  this.currentItem.set('duration', parseFloat(data[0]));
+  var attArray = data[0].trim().split(' ');
+  if (attArray.length > 0) {
+    this.currentItem.set('duration', parseFloat(attArray.shift()));
+    if(!!attArray && attArray.length > 0) {
+      attArray.forEach(attStr => {
+        const att = this.parseAttributes(attStr);
+        if (!!att[0] && att[0].key === 'tvg-logo' && att[0].value !== '\"\"') {
+          const value = att[0].value;
+          if (value.indexOf('"') === 0 && value.lastIndexOf('"') === value.length - 1) {
+            this.currentItem.set('tvgLogo', value.slice(1,-1));
+          } else {
+            this.currentItem.set('tvgLogo', value);
+          }
+        }
+      });
+    }
+  }
+
   this.currentItem.set('title', data[1]);
   if (this.playlistDiscontinuity) {
     this.currentItem.set('discontinuity', true);

@@ -1,42 +1,43 @@
 {
-    "name" : "m3u-parser",
-    "version" : "0.0.9",
-    "description" : "m3u parser",
-    "main" : "./parser.js",
-    "keywords" : [
+    "name": "m3u-parser",
+    "version": "0.0.9",
+    "description": "m3u parser",
+    "main": "./parser.js",
+    "keywords": [
         "m3u",
         "m3u8",
         "hls",
         "http live streaming",
         "stream"
     ],
-    "repository" : {
-        "type" : "git",
-        "url" : "https://github.com/mingyuzhao/node-m3u8.git"
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mingyuzhao/node-m3u8.git"
     },
-    "dependencies" : {
+    "dependencies": {
         "chunked-stream": "~0.0.1"
     },
-    "devDependencies" : {
-        "mocha" : "~1.6.0",
-        "sinon" : "~1.5.0",
-        "should" : "7.1.1"
+    "devDependencies": {
+        "mocha": "~1.6.0",
+        "sinon": "~1.5.0",
+        "should": "7.1.1"
     },
-    "engine" : {
-        "node" : ">=0.6.0"
+    "engine": {
+        "node": ">=0.6.0"
     },
     "scripts": {
-        "test" : "make test"
+        "test": "make test"
     },
-    "author" : {
-        "name" : "Mark Bogdanoff",
-        "email" : "bog@ted.com",
-        "url" : "http://www.ted.com"
+    "author": {
+        "name": "Mark Bogdanoff",
+        "email": "bog@ted.com",
+        "url": "http://www.ted.com"
     },
     "contributors": [
-      {
-        "name": "Ming Yu Zhao",
-        "email": "mingyu.zhao@gmail.com"
-      }
-    ]
+        {
+            "name": "Ming Yu Zhao",
+            "email": "mingyu.zhao@gmail.com"
+        }
+    ],
+    "license" : "ISC"
 }

@@ -33,6 +33,8 @@ describe('AttributeList', function() {
       var list = createAttributeList();
 
       list.getCoerced('audio').should.eql('"hello"');
+      list.getCoerced('tvg-id').should.eql('"fdjkds3c"');
+      list.getCoerced('tvg-name').should.eql('"name-fdjkds3c"');
     });
   });
 
@@ -59,6 +61,8 @@ describe('AttributeList', function() {
 function createAttributeList() {
   var list = new AttributeList;
   list.set('bandwidth', 1);
+  list.set('tvg-id', 'fdjkds3c');
+  list.set('tvg-name', 'name-fdjkds3c');
   list.attributes.audio = 'hello';
   return list;
 }

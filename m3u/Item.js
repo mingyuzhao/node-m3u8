@@ -9,6 +9,7 @@ var Item = module.exports = function Item(attributes) {
     discontinuity : null,
     duration      : null,
     title         : null,
+    tvgLogo       : null,
     uri           : null
   };
 };
