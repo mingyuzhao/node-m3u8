@@ -1,5 +1,5 @@
 {
-    "name": "m3u-parser",
+    "name": "m3u-file-parser",
     "version": "0.0.9",
     "description": "m3u parser",
     "main": "./parser.js",
